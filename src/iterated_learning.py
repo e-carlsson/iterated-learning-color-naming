@@ -420,10 +420,10 @@ def get_args():
         type=str,
         help="Type of experiment to run. NIL, IL, or RL",
     )
-    parser.add_argument("hidden_dim", default=25, type=int, help="Hidden dim")
-    parser.add_argument("layers", default=1, type=int, help="Number of hidden layers")
+    parser.add_argument("--hidden_dim", default=25, type=int, help="Hidden dim")
+    parser.add_argument("--layers", default=1, type=int, help="Number of hidden layers")
     parser.add_argument(
-        "reward", default=0.001, type=float, help="param in reward function"
+        "--reward", default=0.001, type=float, help="param in reward function"
     )
     args = parser.parse_args()
     return args

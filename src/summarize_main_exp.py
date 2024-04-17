@@ -746,11 +746,7 @@ if __name__ == "__main__":
     df.to_csv(path + "learning_results.csv")
     hue_baseline = get_vertical(max_v=10)
     hue_results = get_results(hue_baseline, ib_model)
-    # load kmeans systems
-    with open("kmeans_systems/kmeans_systems.pkl", "rb") as f:
-        kmeans_systems = pickle.load(f)
-    kmeans_results = get_results(kmeans_systems, ib_model)
-    kmeans_results.to_csv("kmeans_systems/kmeans_results.csv")
+
 
     plot_ib(
         results=df,
@@ -777,7 +773,7 @@ if __name__ == "__main__":
         save_path=path,
         rm_s=rm_s,
         rm_d=rm_d,
-        kmeans_systems=kmeans_systems,
+        kmeans_systems=None,
     )
     df.to_csv(path + "learning_results.csv")
     random_model_metrics(

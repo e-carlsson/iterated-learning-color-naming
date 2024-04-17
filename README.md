@@ -6,8 +6,11 @@ If you find this code useful, please consider citing:
 
 @article{carlsson2023iterated,
   title={Iterated learning and communication jointly explain efficient color naming systems},
+
   author={Carlsson, Emil and Dubhashi, Devdatt and Regier, Terry},
+
   journal={Proceedings of the 45th Annual Meeting of the Cognitive Science Society},
+  
   year={2023}
 }
 

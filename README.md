@@ -1,6 +1,6 @@
 # Neural Iterated Learning and Color Naming
 
-Code used from the experiments in https://arxiv.org/pdf/2305.10154.pdf.
+Code used for the experiments in https://arxiv.org/pdf/2305.10154.pdf.
 
 If you find this code useful, please consider citing: 
 

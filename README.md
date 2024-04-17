@@ -21,8 +21,8 @@ Neural Iterated Learning algorithm was introduced in https://arxiv.org/pdf/2002.
 
 
 To run a NIL experiment:
-1. pip install -r requirements.txt
-2. cd src/
+1. cd src/
+2. pip install -r requirements.txt
 3. git submodule add https://github.com/nogazs/ib-color-naming.git ib_color_naming
 4. python iterated_learning.py il_experiment.pkl 100 NIL
 

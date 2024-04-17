@@ -5,6 +5,7 @@ Code used from the experiments in https://arxiv.org/pdf/2305.10154.pdf.
 If you find this code useful, please consider citing: 
 
 @article{carlsson2023iterated,
+
   title={Iterated learning and communication jointly explain efficient color naming systems},
 
   author={Carlsson, Emil and Dubhashi, Devdatt and Regier, Terry},

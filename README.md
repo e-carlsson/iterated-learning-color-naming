@@ -1,6 +1,6 @@
 # Neural Iterated Learning and Color Naming
 
-This is the code used to produce the results in LINK.
+Code used from the experiments in https://arxiv.org/pdf/2305.10154.pdf.
 
 If you find this code useful, please consider citing: 
 

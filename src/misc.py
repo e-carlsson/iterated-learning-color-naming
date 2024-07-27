@@ -156,6 +156,9 @@ def get_entropy(speaker, need):
     return -(pW * np.log2(pW + PRECISION)).sum()
 
 
+# NID and SoftNID as defined in Zaslavsky et al 2018
+# Note that the definition is slightly different from the usual NID used in ML
+# here SoftNID = standard NIL in ML and NID is a hard version of it (using modemaps)
 def NID(pW_X, pV_X, pX):
     """
     Hard NID
@@ -187,7 +190,6 @@ def NID(pW_X, pV_X, pX):
 
 def softNID(pW_X, pV_X, pX):
     """
-
     :param pW_X:
     :param pV_X:
     :param pX:

@@ -211,11 +211,13 @@ class iteratedLearning:
             self.initial_speaker = np.ones([330, vocabulary_size]) / vocabulary_size
             self.transmission_phase()
         else:
+            # Take initial speaker and sample transmission data from it
             self.initial_speaker = initial_speaker
             idx = np.random.choice(
                 330, p=self.need, size=self.transmission_samples, replace=True
             )
             X = self.cielab[idx]
+            # name color chips according to the initial speaker
             y = torch.LongTensor(
                 [np.random.choice(vocabulary_size, p=initial_speaker[i]) for i in idx]
             )
@@ -298,7 +300,9 @@ class iteratedLearning:
             action, _, dist = self.listener(word.detach())
             guess = self.cielab[action]
             reward = self.reward(X, guess)
-            loss = -((reward - moving_average) * dist.log_prob(action)).mean()
+            loss = -(
+                (reward - moving_average) * dist.log_prob(action)
+            ).mean()  # REINFORCE loss
             loss.backward()
             optimizer.step()
             moving_average += 1 / (t + 1) * (reward.mean() - moving_average)
@@ -323,7 +327,9 @@ class iteratedLearning:
             reward = self.reward(X, guess)
             loss = (
                 -((reward - moving_average) * dist_listener.log_prob(action)).mean()
-                - ((reward - moving_average) * dist_speaker.log_prob(word)).mean()
+                - (
+                    (reward - moving_average) * dist_speaker.log_prob(word)
+                ).mean()  # REINFORCE loss
             )
             loss.backward()
             optimizer.step()
@@ -379,6 +385,8 @@ class iteratedLearning:
         i = 0
         self.log_data
         while not convergence and i < self.n_episodes:
+            # Running without resetting the agents. This will be  the exp as in Kågebäck et al. (2020).
+            #  Max number of interactions is batch_size * train_steps * n_episodes
             i += 1
             print(f"At generation {i}")
             self.interactive_training()

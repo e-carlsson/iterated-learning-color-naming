@@ -29,3 +29,6 @@ To run a NIL experiment:
 To run the main experiment on a slurm custer (it takes about 30 min on a >1000cpu system):
 1. Specify details in python_script.sh
 2. run: sbatch python_script.sh run_iterated_learning.py
+
+
+The NIL can be initialized from a particular system 

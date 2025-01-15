@@ -5,13 +5,21 @@ Code used for the experiments in [Cultural evolution via iterated learning and c
 If you find this code useful, please consider citing: 
 
 @article{carlsson2024cultural,
+
   title={Cultural evolution via iterated learning and communication explains efficient color naming systems},
+  
   author={Carlsson, Emil and Dubhashi, Devdatt and Regier, Terry},
+  
   journal={Journal of Language Evolution},
+  
   volume={9},
+  
   number={1-2},
+  
   pages={49--66},
+  
   year={2024},
+  
   publisher={Oxford University Press UK}
 }
 

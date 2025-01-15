@@ -1,18 +1,18 @@
 # Neural Iterated Learning and Color Naming
 
-Code used for the experiments in https://arxiv.org/pdf/2305.10154.pdf.
+Code used for the experiments in [Cultural evolution via iterated learning and communication explains efficient color naming systems](https://academic.oup.com/jole/article/9/1-2/49/7907230).
 
 If you find this code useful, please consider citing: 
 
-@article{carlsson2023iterated,
-
-  title={Iterated learning and communication jointly explain efficient color naming systems},
-
+@article{carlsson2024cultural,
+  title={Cultural evolution via iterated learning and communication explains efficient color naming systems},
   author={Carlsson, Emil and Dubhashi, Devdatt and Regier, Terry},
-
-  journal={Proceedings of the 45th Annual Meeting of the Cognitive Science Society},
-  
-  year={2023}
+  journal={Journal of Language Evolution},
+  volume={9},
+  number={1-2},
+  pages={49--66},
+  year={2024},
+  publisher={Oxford University Press UK}
 }
 
 Code related to IB and color naming comes from https://github.com/nogazs/ib-color-naming.
